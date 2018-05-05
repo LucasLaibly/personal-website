@@ -2,6 +2,12 @@ body{font-family:Lora,'Helvetica Neue',Helvetica,Arial,sans-serif;position:relat
 
 html{width:100%;height:100%}
 
+hr {border: none;height: 3px;color: white;background-color: white;}
+
+.left{float: left;padding: 0 20px 20px 0;}
+
+.right{float: right;padding: 0 20px 20px 0;}
+
 h1,h2,h3,h4,h5,h6{font-family:Cabin,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;margin:0 0 35px;letter-spacing:1px;text-transform:uppercase}
 
 p{font-size:16px;line-height:1.5;margin:0 0 25px}
@@ -50,15 +56,30 @@ a:focus,a:hover{text-decoration:none;color:#1d9b6c}
 
 .content-section{padding-top:150px;padding-bottom:150px}
 
-.download-section{color: black;background:url(../img/line-dice.JPG) no-repeat center center scroll;background-color:#000;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}#map{width:100%;height:300px}
+.contact-section{color: black;background:url(../img/night-sky.jpg) no-repeat center center scroll;background-color:#000;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}#map{width:100%;height:300px}
+
+.download-section{color: black;background:url(../img/simple-grey.jpg) no-repeat center center scroll;background-color:#000;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}#map{width:100%;height:300px}
 
 @media (min-width:992px){.content-section{padding-top:200px;padding-bottom:200px}#map{height:350px}}
 
 .btn{font-family:Cabin,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;transition:all .3s ease-in-out;text-transform:uppercase;border-radius:0}
 
-.btn-default{color:#0537FF;border:1px solid #0537FF;background-color:transparent}
+.btn-default{color:#fff;border:1px solid #fff;background-color:transparent}
 
 .btn-default:focus,.btn-default:hover{color:#000;border:1px solid #0537FF;outline:0;background-color:#0537FF}
+
+.btn-non-default {
+  color: $primary;
+  border: 1px solid $primary;
+  background-color: transparent;
+  &:focus,
+  &:hover {
+    color: white;
+    border: 1px solid $primary;
+    outline: none;
+    background-color: $primary;
+  }
+}
 
 ul.banner-social-buttons{margin-top:0}@media (max-width:1199px){ul.banner-social-buttons{margin-top:15px}}
 
@@ -78,8 +99,40 @@ img::selection{background:0 0}
 
 img::-moz-selection{background:0 0}
 
+.accordion {
+    background-color: #444;
+    color: #eee;
+    cursor: left;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    outline-style: solid;
+    font-size: 15px;
+    transition: 0.4s;
+}
 
+.active, .collapsible:hover, .accordion:hover {
+    background-color: #0537FF; 
+}
 
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
 
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
 
+.active:after {
+    content: "\2212";
+}
 
